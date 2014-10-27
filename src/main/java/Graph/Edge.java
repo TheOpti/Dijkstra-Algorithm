@@ -15,13 +15,10 @@ public class Edge {
     private Node to;
     private Integer cost;
     
-    public Edge() {
-        
-    }
-    
-    public Edge(Node from, Node to) {
+    public Edge(Node from, Node to, Integer cost) {
         this.from = from;
         this.to = to;
+        this.cost = cost;
     }
     
     public Node getFrom() {
@@ -44,5 +41,23 @@ public class Edge {
         this.to = to;
     }
     
+    public void setCost(Integer cost) {
+        this.cost = cost;
+    }
+    
+    public Edge withFrom(Node from) {
+        setFrom(from);
+        return this;
+    }
+    
+    public Edge withTo(Node to) {
+        setTo(to);
+        return this;
+    }
+    
+    public Edge withCost(Integer cost) {
+        setCost(cost);
+        return this;
+    }
     
 }
